@@ -1,0 +1,16 @@
+Create an app which can consolidate all the Visa cards from various banks.
+All the transactions (shopping, insurance) made with Visa cards can be consolidated.
+On top of each credit card/account benefits,
+    - every $100 dollar spent will collect one stamp
+    - every week there will be 1 game for a chance to win one stamp.
+Collect 8 stamps to redeem prizes (shopping vouchers, rebate for financial services paid by Visa cards)
+
+Visa APIs to use
+https://developer.visa.com/apibrowser/#segment=Issuers
+- To add cards in the app 
+    Payment Account Validation https://developer.visa.com/capabilities/pav/docs
+- For people to track their spending
+    Visa Cardholder Purchase Inquiry https://developer.visa.com/capabilities/visa-cardholder-purchase-inquiry
+- 
+
+Use Perx to create rewards vouchers
