@@ -9,7 +9,9 @@
 
 						<div class="user">
 							<div class="avatar-sm float-left mr-2">
-								<img src="/static/assets/img/melvyn.jpg" alt="..." class="avatar-img rounded-circle">
+								<!-- <img src="/static/assets/img/melvyn.jpg" alt="..." class="avatar-img rounded-circle"> 
+								-->
+								<img src="/static/assets/img/{{ current_user.user }}.jpg" alt="..." class="avatar-img rounded-circle">
 							</div>
 							<div class="info">
 								<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
@@ -43,16 +45,27 @@
 							<li class="nav-item active">
 								<a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
 									<i class="fas fa-home"></i>
-									<p>Dashboard</p>
+									<p>My Finances</p>
 									<span class="caret"></span>
 								</a>
 								<div class="collapse" id="dashboard">
 									<ul class="nav nav-collapse">
 										<li>
 											<a href="/index.html">
-												<span class="sub-item">Dashboard 1</span>
+												<span class="sub-item">My Spending Habits</span>
 											</a>
 										</li>
+										<li>
+											<a href="/index.html">
+												<span class="sub-item">Wealth Insights</span>
+											</a>
+										</li>
+										<li>
+											<a href="/index.html">
+												<span class="sub-item">Current Covid-19 Situation</span>
+											</a>
+										</li>
+										
 									</ul>
 								</div>
 							</li>
@@ -60,7 +73,7 @@
 								<span class="sidebar-mini-icon">
 									<i class="fa fa-ellipsis-h"></i>
 								</span>
-								<h4 class="text-section">Components</h4>
+								<h4 class="text-section">Menu</h4>
 							</li>
 							<li class="nav-item">
 								<a data-toggle="collapse" href="#base">
@@ -123,7 +136,7 @@
 									</ul>
 								</div>
 							</li>
-							<li class="nav-item">
+							<!-- <li class="nav-item">
 								<a data-toggle="collapse" href="#sidebarLayouts">
 									<i class="fas fa-th-list"></i>
 									<p>Sidebar Layouts</p>
@@ -158,7 +171,7 @@
 										</li>
 									</ul>
 								</div>
-							</li>
+							</li> -->
 							<li class="nav-item">
 								<a data-toggle="collapse" href="#forms">
 									<i class="fas fa-pen-square"></i>
@@ -291,11 +304,11 @@
 									</ul>
 								</div>
 							</li>
-							<li class="mx-4 mt-2">
+							<!-- <li class="mx-4 mt-2">
 								<a href="https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark" 
 										class="btn btn-primary btn-block">
 										<span class="btn-label mr-2"> <i class="fa fa-rocket"></i> </span>See Product</a> 
-							</li>
+							</li> -->
 						</ul>
 
 					{% endif %}

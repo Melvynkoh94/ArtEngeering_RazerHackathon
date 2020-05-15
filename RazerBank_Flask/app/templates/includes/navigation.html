@@ -5,19 +5,17 @@
 			<div class="logo-header" data-background-color="dark2">
 				
 				<a href="index.html" class="logo">
-					<img src="/static/assets/img/AE_logo.png" width="160" height="50" alt="navbar brand" class="navbar-brand">
-					<!-- <img src="/static/assets/img/logo.svg" alt="navbar brand" class="navbar-brand"> -->
-					<!-- <h2 style="color: aliceblue;">Art Engineering Bank</h2> -->
+					<img src="/static/assets/img/AE_logo_razer_green.png" width="160" height="50" alt="navbar brand" class="navbar-brand">
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
-						<i class="icon-menu"></i>
+						<i class="icon-menu" style="color:#44d62c"></i>
 					</span>
 				</button>
-				<button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+				<button class="topbar-toggler more"><i class="icon-options-vertical" style="color:#44d62c"></i></button>
 				<div class="nav-toggle">
 					<button class="btn btn-toggle toggle-sidebar">
-						<i class="icon-menu"></i>
+						<i class="icon-menu" style="color:#44d62c"></i>
 					</button>
 				</div>
 			</div>
@@ -149,7 +147,7 @@
 												</a>
 												<a href="#">
 													<div class="notif-img"> 
-														<img src="/static/assets/img/profile2.jpg" alt="Img Profile">
+														<img src="/static/assets/img/isabelle.jpg" alt="Img Profile">
 													</div>
 													<div class="notif-content">
 														<span class="block">
@@ -231,14 +229,16 @@
 							<li class="nav-item dropdown hidden-caret">
 								<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
 									<div class="avatar-sm">
-										<img src="/static/assets/img/melvyn.jpg" alt="..." class="avatar-img rounded-circle">
+										<!-- <img src="/static/assets/img/melvyn.jpg" alt="..." class="avatar-img rounded-circle"> -->
+										<img src="/static/assets/img/{{ current_user.user }}.jpg" alt="..." class="avatar-img rounded-circle">
 									</div>
 								</a>
 								<ul class="dropdown-menu dropdown-user animated fadeIn">
 									<div class="dropdown-user-scroll scrollbar-outer">
 										<li>
 											<div class="user-box">
-												<div class="avatar-lg"><img src="/static/assets/img/melvyn.jpg" alt="image profile" class="avatar-img rounded"></div>
+												<!-- <div class="avatar-lg"><img src="/static/assets/img/melvyn.jpg" alt="image profile" class="avatar-img rounded"></div> -->
+												<img src="/static/assets/img/{{ current_user.user }}.jpg" alt="..." class="avatar-img rounded-circle">
 												<div class="u-text">
 													<h4>
 							{{ current_user.user }}
@@ -253,8 +253,8 @@
 										<li>
 											<div class="dropdown-divider"></div>
 											<a class="dropdown-item" href="#">My Profile</a>
-											<a class="dropdown-item" href="#">My Balance</a>
-											<a class="dropdown-item" href="#">Inbox</a>
+											<a class="dropdown-item" href="#">My Wallet</a>
+											<a class="dropdown-item" href="#">Coupons</a>
 											<div class="dropdown-divider"></div>
 											<a class="dropdown-item" href={{ url_for('logout') }}>Logout</a>
 										</li>

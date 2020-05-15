@@ -108,9 +108,9 @@ def login():
                 login_user(user)
                 return redirect(url_for('index'))
             else:
-                msg = "Wrong password. Please try again."
+                msg = "Invalid Username or Password. Please try again."
         else:
-            msg = "Unknown user"
+            msg = "User not found.  Click Register to become a member."
 
     return render_template( 'pages/login.html', form=form, msg=msg )
 
