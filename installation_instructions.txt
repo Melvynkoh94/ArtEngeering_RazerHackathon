@@ -1,0 +1,5 @@
+1) virtualenv env
+2) .\env\Scripts\activate
+3) create .flaskenv file
+4) pip install -r requirements.txt
+5) pip install python-dotenv

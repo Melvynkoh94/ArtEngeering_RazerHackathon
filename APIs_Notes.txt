@@ -1,0 +1,5 @@
+MAMBU Mandatory Field
+
+NRIC (person)
+
+UEN (company)
