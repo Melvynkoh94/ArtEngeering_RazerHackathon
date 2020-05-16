@@ -14240,7 +14240,7 @@ body[data-background-color="dark"] .board {
 }
 
 .bg-secondary2 {
-  background-color: #5c55bf !important;
+  background-color: #44d62c !important;
 }
 
 .bg-info {
@@ -14304,13 +14304,13 @@ body[data-background-color="dark"] .board {
 }
 
 .bg-secondary-gradient {
-  background: #6861ce !important;
+  background: #1ead36 !important;
   background: -webkit-linear-gradient(
     legacy-direction(-45deg),
-    #2a20ac,
-    #6861ce
+    #11b827,
+    #058b48
   ) !important;
-  background: linear-gradient(-45deg, #2a20ac, #6861ce) !important;
+  background: linear-gradient(-45deg, #11b827, #058b48) !important;
 }
 
 .bg-info-gradient {

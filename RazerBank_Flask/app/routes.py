@@ -10,14 +10,16 @@ from werkzeug.exceptions import HTTPException, NotFound, abort
 from app        import app, lm, db, bc
 from app.models import User
 from app.forms  import LoginForm, RegisterForm
-from app.api.FXRates import checkFXRates
-from app.api.MerchantSearch import checkMerchantSearch
+from app.api.travels.FXRates import checkFXRates
+from app.api.travels.MerchantSearch import checkMerchantSearch
+from app.api.covid19 import getCovid19_WorldStats
 
 
 # Test API call functionalities
 print('=== API CALLS TEST ===')
-print(checkFXRates())
-print(checkMerchantSearch())
+# print(checkFXRates())
+# print(checkMerchantSearch())
+print(getCovid19_WorldStats())
 
 # provide login manager with load_user callback
 @lm.user_loader
