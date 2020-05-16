@@ -1,1 +1,2 @@
-# ArtEngeering_RazerHackathon
+
+![Screenshot of Main Page](screenshot.JPG)
