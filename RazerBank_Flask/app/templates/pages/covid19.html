@@ -1,0 +1,327 @@
+{% extends "layouts/default.html" %} {% block title %} Forms {% endblock title
+%} {% block stylesheets %} {% endblock stylesheets %} {% block content %}
+
+<div class="row row-card-no-pd">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-head-row card-tools-still-right">
+          <h4 class="card-title">Covid-19 Tracker</h4>
+          <div class="card-tools">
+            <button class="btn btn-icon btn-link btn-primary btn-xs">
+              <span class="fa fa-angle-down"></span>
+            </button>
+            <button
+              class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"
+            >
+              <span class="fa fa-sync-alt"></span>
+            </button>
+            <button class="btn btn-icon btn-link btn-primary btn-xs">
+              <span class="fa fa-times"></span>
+            </button>
+          </div>
+        </div>
+        <p class="card-category">
+          Map of the statistics of number of infections around the world.
+          Supported by Axios Mathroid API.
+        </p>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="table-responsive table-hover table-sales">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th></th>
+                    <th>Country</th>
+                    <th>Infected</th>
+                    <th>Recovered</th>
+                    <th>Deaths</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="flag">
+                        <img
+                          src="/static/assets/img/flags/us.png"
+                          alt="united states"
+                        />
+                      </div>
+                    </td>
+                    <td>USA</td>
+                    <td class="text-right">
+                      1,484,285
+                    </td>
+                    <td class="text-right">
+                      327,751
+                    </td>
+                    <td class="text-right">
+                      327,751
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="flag">
+                        <img
+                          src="/static/assets/img/flags/es.png"
+                          alt="spain"
+                        />
+                      </div>
+                    </td>
+                    <td>Spain</td>
+                    <td class="text-right">
+                      274,367
+                    </td>
+                    <td class="text-right">
+                      188,967
+                    </td>
+                    <td class="text-right">
+                      327,751
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="flag">
+                        <img
+                          src="/static/assets/img/flags/ru.png"
+                          alt="russia"
+                        />
+                      </div>
+                    </td>
+                    <td>Russia</td>
+                    <td class="text-right">
+                      272,043
+                    </td>
+                    <td class="text-right">
+                      63,166
+                    </td>
+                    <td class="text-right">
+                      327,751
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="flag">
+                        <img
+                          src="/static/assets/img/flags/gb.png"
+                          alt="greatbritain"
+                        />
+                      </div>
+                    </td>
+                    <td>United Kingdom</td>
+                    <td class="text-right">
+                      236,711
+                    </td>
+                    <td class="text-right">
+                      33,998
+                    </td>
+                    <td class="text-right">
+                      327,751
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="flag">
+                        <img
+                          src="/static/assets/img/flags/it.png"
+                          alt="italy"
+                        />
+                      </div>
+                    </td>
+                    <td>Italy</td>
+                    <td class="text-right">
+                      223,885
+                    </td>
+                    <td class="text-right">
+                      120,205
+                    </td>
+                    <td class="text-right">
+                      327,751
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="flag">
+                        <img
+                          src="/static/assets/img/flags/br.png"
+                          alt="brazil"
+                        />
+                      </div>
+                    </td>
+                    <td>Brazil</td>
+                    <td class="text-right">
+                      220,291
+                    </td>
+                    <td class="text-right">
+                      84,970
+                    </td>
+                    <td class="text-right">
+                      327,751
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mapcontainer">
+              <div id="map-example" class="vmap"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="page-inner mt--5"></div>
+  <div class="row row-card-no-pd">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-head-row card-tools-still-right">
+            <h4 class="card-title">Covid-19 Tracker</h4>
+            <div class="card-tools">
+              <button class="btn btn-icon btn-link btn-primary btn-xs">
+                <span class="fa fa-angle-down"></span>
+              </button>
+              <button
+                class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"
+              >
+                <span class="fa fa-sync-alt"></span>
+              </button>
+              <button class="btn btn-icon btn-link btn-primary btn-xs">
+                <span class="fa fa-times"></span>
+              </button>
+            </div>
+          </div>
+          <p class="card-category">
+            Map of the statistics of number of infections around the world.
+            Supported by Axios Mathroid API.
+          </p>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="table-responsive table-hover table-sales">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="flag">
+                          <img
+                            src="/static/assets/img/flags/id.png"
+                            alt="indonesia"
+                          />
+                        </div>
+                      </td>
+                      <td>Indonesia</td>
+                      <td class="text-right">
+                        2.320
+                      </td>
+                      <td class="text-right">
+                        42.18%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flag">
+                          <img
+                            src="/static/assets/img/flags/us.png"
+                            alt="united states"
+                          />
+                        </div>
+                      </td>
+                      <td>USA</td>
+                      <td class="text-right">
+                        240
+                      </td>
+                      <td class="text-right">
+                        4.36%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flag">
+                          <img
+                            src="/static/assets/img/flags/au.png"
+                            alt="australia"
+                          />
+                        </div>
+                      </td>
+                      <td>Australia</td>
+                      <td class="text-right">
+                        119
+                      </td>
+                      <td class="text-right">
+                        2.16%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flag">
+                          <img
+                            src="/static/assets/img/flags/ru.png"
+                            alt="russia"
+                          />
+                        </div>
+                      </td>
+                      <td>Russia</td>
+                      <td class="text-right">
+                        1.081
+                      </td>
+                      <td class="text-right">
+                        19.65%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flag">
+                          <img
+                            src="/static/assets/img/flags/cn.png"
+                            alt="china"
+                          />
+                        </div>
+                      </td>
+                      <td>China</td>
+                      <td class="text-right">
+                        1.100
+                      </td>
+                      <td class="text-right">
+                        20%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flag">
+                          <img
+                            src="/static/assets/img/flags/br.png"
+                            alt="brazil"
+                          />
+                        </div>
+                      </td>
+                      <td>Brasil</td>
+                      <td class="text-right">
+                        640
+                      </td>
+                      <td class="text-right">
+                        11.63%
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mapcontainer">
+                <div id="map-example" class="vmap"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+{% endblock content %} {% block javascripts %} {% endblock javascripts %}
