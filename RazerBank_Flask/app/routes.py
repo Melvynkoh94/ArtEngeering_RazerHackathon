@@ -1,9 +1,3 @@
-# -*- encoding: utf-8 -*-
-"""
-License: MIT
-Copyright (c) 2019 - present AppSeed.us
-"""
-
 # Python modules
 import os, logging 
 
@@ -16,6 +10,14 @@ from werkzeug.exceptions import HTTPException, NotFound, abort
 from app        import app, lm, db, bc
 from app.models import User
 from app.forms  import LoginForm, RegisterForm
+from app.api.FXRates import checkFXRates
+from app.api.MerchantSearch import checkMerchantSearch
+
+
+# Test API call functionalities
+print('=== API CALLS TEST ===')
+print(checkFXRates())
+print(checkMerchantSearch())
 
 # provide login manager with load_user callback
 @lm.user_loader
@@ -83,6 +85,8 @@ def login():
     
     # cut the page for authenticated users
     if current_user.is_authenticated:
+        checkFXRates()
+        print('I am here!')
         return redirect(url_for('index'))
             
     # Declare the login form
