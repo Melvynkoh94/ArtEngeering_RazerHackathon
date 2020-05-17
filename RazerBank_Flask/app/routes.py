@@ -13,13 +13,15 @@ from app.forms  import LoginForm, RegisterForm
 from app.api.travels.FXRates import checkFXRates
 from app.api.travels.MerchantSearch import checkMerchantSearch
 from app.api.covid19 import getCovid19_WorldStats
+from app.api.travels.FXRates import checkFXRates
+
 
 
 # Test API call functionalities
 print('=== API CALLS TEST ===')
 # print(checkFXRates())
 # print(checkMerchantSearch())
-print(getCovid19_WorldStats())
+# print(getCovid19_WorldStats())
 
 # provide login manager with load_user callback
 @lm.user_loader
@@ -87,8 +89,7 @@ def login():
     
     # cut the page for authenticated users
     if current_user.is_authenticated:
-        checkFXRates()
-        print('I am here!')
+        # checkFXRates()
         return redirect(url_for('index'))
             
     # Declare the login form
@@ -124,20 +125,44 @@ def login():
 @app.route('/', defaults={'path': 'index.html'})
 @app.route('/<path>')
 def index(path):
-
     if not current_user.is_authenticated:
         return redirect(url_for('login'))
 
     content = None
 
     try:
+        # Populate Covid19 Stats Here
+        print('path is: ' + path)
+        if path == 'blank-page.html':
+            print('Welcome to blank page!')
+            periodsList = [{"Period":"Q1"}, {"Period":"Q2"}, {"Period":"Q3"}, {"Period":"Q4"}]
+            return render_template('pages/'+path, msg=msg, periodsList=periodsList)
+
+        if path == 'fxrates.html':
+            fxrates_response = checkFXRates(156, 702)
+            print(fxrates_response)
+            print("Going to " + "pages/"+path)
+            return render_template('pages/'+path, fxrates_response=fxrates_response)
+
 
         # try to match the pages defined in -> pages/<input file>
         return render_template( 'pages/'+path )
     
-    except:
-        
+    except:      
         return render_template( 'pages/error-404.html' )
+
+
+@app.route('/fxrates_form', methods=['POST'])
+def fxrates_form():
+    # Get URL parameters based on destination code, and country code
+    req = request.form
+    destinationCode = req.get("destinationCode")
+    sourceCode = req.get("sourceCode")
+    
+    fxrates_response = checkFXRates(destinationCode, sourceCode)
+    print(fxrates_response)
+    return render_template('pages/'+path, fxrates_response=fxrates_response)
+
 
 # Return sitemap 
 @app.route('/sitemap.xml')

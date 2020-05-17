@@ -2,6 +2,7 @@ import requests
 from requests.auth import HTTPBasicAuth
 import json
 from app.api.travels.visaConfig import *
+# from visaConfig import *
 
 #######################
 # SSLcertfile_path = 'C:/Users/User/Downloads/DigiCertGlobalRootCA.cer'
@@ -37,7 +38,8 @@ def checkFXRates(destinationCode, sourceCode):
 }
 
   response = requests.request("POST", url, headers=headers, auth=HTTPBasicAuth('VTT095H3IAKYE9IB2QHJ21i2RLnD_iVYx8qwJurINP8bBJzbk', 'ox77y1TivzPgTiHHO3R'), verify=SSLcertfile_path, cert=(certfile_path,key_path), data = json.dumps(body))
-  print(response.text.encode('utf8'))
-  return response.text.encode('utf8')
+  response_JSON = response.json()
+  # print(response_JSON)
+  return response_JSON
 
 checkFXRates(156, 702)

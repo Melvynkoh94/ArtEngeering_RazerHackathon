@@ -1,21 +1,24 @@
+{% extends "layouts/default.html" %} {% block title %} Dashboard {% endblock
+title %} {% block stylesheets %} {% endblock stylesheets %} {% block content %}
 
-{% extends "layouts/default.html" %}
+<!-- (Almost) A blank page -->
+<h1>Imported from Backend</h1>
+<div>
+  {% if msg %}
+  <span class="text-danger">
+    {{ msg | safe }}
+  </span>
+  {% else %}
+  <span>Register</span>
+  {% endif %}
+</div>
+<div>
+  <h1>Hello</h1>
+  {% for data in periodsList %}
+  <h1>{{ data["Period"] | safe}}</h1>
+  {% endfor %}
+</div>
 
-{% block title %} Dashboard {% endblock title %}
 
-{% block stylesheets %}
 
-{% endblock stylesheets %}
-
-{% block content %}
-
-    <!-- (Almost) A blank page -->
-    <h3>
-    Add content here
-    </h3>
-
-{% endblock content %}
-
-{% block javascripts %}
-
-{% endblock javascripts %}
+{% endblock content %} {% block javascripts %} {% endblock javascripts %}

@@ -34,26 +34,6 @@ $.notify(
   }
 );
 
-// JQVmap
-$("#map-example").vectorMap({
-  map: "world_en",
-  backgroundColor: "transparent",
-  borderColor: "#fff",
-  borderWidth: 2,
-  color: "#e4e4e4",
-  enableZoom: true,
-  hoverColor: "#35cd3a",
-  hoverOpacity: null,
-  normalizeFunction: "linear",
-  scaleColors: ["#b6d6ff", "#005ace"],
-  selectedColor: "#35cd3a",
-  selectedRegions: ["ID", "RU", "US", "AU", "CN", "BR"],
-  showTooltip: true,
-  onRegionClick: function (element, code, region) {
-    return false;
-  },
-});
-
 //Chart
 
 var ctx = document.getElementById("statisticsChart").getContext("2d");
@@ -77,7 +57,7 @@ var statisticsChart = new Chart(ctx, {
     ],
     datasets: [
       {
-        label: "Subscribers",
+        label: "Coupons Used",
         borderColor: "#f3545d",
         pointBackgroundColor: "rgba(243, 84, 93, 0.6)",
         pointRadius: 0,
@@ -88,7 +68,7 @@ var statisticsChart = new Chart(ctx, {
         data: [154, 184, 175, 203, 210, 231, 240, 278, 252, 312, 320, 374],
       },
       {
-        label: "New Visitors",
+        label: "Funds Transfers",
         borderColor: "#fdaf4b",
         pointBackgroundColor: "rgba(253, 175, 75, 0.6)",
         pointRadius: 0,
@@ -99,7 +79,7 @@ var statisticsChart = new Chart(ctx, {
         data: [256, 230, 245, 287, 240, 250, 230, 295, 331, 431, 456, 521],
       },
       {
-        label: "Active Users",
+        label: "Bills Paid",
         borderColor: "#177dff",
         pointBackgroundColor: "rgba(23, 125, 255, 0.6)",
         pointRadius: 0,

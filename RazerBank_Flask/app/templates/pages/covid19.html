@@ -1,171 +1,184 @@
 {% extends "layouts/default.html" %} {% block title %} Forms {% endblock title
 %} {% block stylesheets %} {% endblock stylesheets %} {% block content %}
-
-<div class="row row-card-no-pd">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header">
-        <div class="card-head-row card-tools-still-right">
-          <h4 class="card-title">Covid-19 Tracker</h4>
-          <div class="card-tools">
-            <button class="btn btn-icon btn-link btn-primary btn-xs">
-              <span class="fa fa-angle-down"></span>
-            </button>
-            <button
-              class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"
+<div>
+  <h1></h1>
+</div>
+<div class="page-inner mt--2">
+  <div class="row row-card-no-pd">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-head-row card-tools-still-right">
+            <h4
+              class="card-title"
+              style="font-weight: 900; font-size: x-large; color: #44d62c;"
             >
-              <span class="fa fa-sync-alt"></span>
-            </button>
-            <button class="btn btn-icon btn-link btn-primary btn-xs">
-              <span class="fa fa-times"></span>
-            </button>
+              Covid-19 World Statistics
+            </h4>
+
+            <div
+              class="d-flex align-items-left align-items-md-center flex-column flex-md-row"
+            ></div>
+
+            <div class="card-tools"></div>
           </div>
+          <p class="card-category" style="font-size: larger;">
+            Please advise travel restrictions to these countries.
+          </p>
+          <p class="card-category" style="font-size: larger;">
+            Statistics of Covid-19 around the world. Supported by Axios
+            <a href="https://covid19.mathdro.id/api">Mathdro</a> API.
+          </p>
         </div>
-        <p class="card-category">
-          Map of the statistics of number of infections around the world.
-          Supported by Axios Mathroid API.
-        </p>
-      </div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-7">
-            <div class="table-responsive table-hover table-sales">
-              <table class="table">
-                <tbody>
-                  <tr>
-                    <th></th>
-                    <th>Country</th>
-                    <th>Infected</th>
-                    <th>Recovered</th>
-                    <th>Deaths</th>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="flag">
-                        <img
-                          src="/static/assets/img/flags/us.png"
-                          alt="united states"
-                        />
-                      </div>
-                    </td>
-                    <td>USA</td>
-                    <td class="text-right">
-                      1,484,285
-                    </td>
-                    <td class="text-right">
-                      327,751
-                    </td>
-                    <td class="text-right">
-                      327,751
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="flag">
-                        <img
-                          src="/static/assets/img/flags/es.png"
-                          alt="spain"
-                        />
-                      </div>
-                    </td>
-                    <td>Spain</td>
-                    <td class="text-right">
-                      274,367
-                    </td>
-                    <td class="text-right">
-                      188,967
-                    </td>
-                    <td class="text-right">
-                      327,751
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="flag">
-                        <img
-                          src="/static/assets/img/flags/ru.png"
-                          alt="russia"
-                        />
-                      </div>
-                    </td>
-                    <td>Russia</td>
-                    <td class="text-right">
-                      272,043
-                    </td>
-                    <td class="text-right">
-                      63,166
-                    </td>
-                    <td class="text-right">
-                      327,751
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="flag">
-                        <img
-                          src="/static/assets/img/flags/gb.png"
-                          alt="greatbritain"
-                        />
-                      </div>
-                    </td>
-                    <td>United Kingdom</td>
-                    <td class="text-right">
-                      236,711
-                    </td>
-                    <td class="text-right">
-                      33,998
-                    </td>
-                    <td class="text-right">
-                      327,751
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="flag">
-                        <img
-                          src="/static/assets/img/flags/it.png"
-                          alt="italy"
-                        />
-                      </div>
-                    </td>
-                    <td>Italy</td>
-                    <td class="text-right">
-                      223,885
-                    </td>
-                    <td class="text-right">
-                      120,205
-                    </td>
-                    <td class="text-right">
-                      327,751
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="flag">
-                        <img
-                          src="/static/assets/img/flags/br.png"
-                          alt="brazil"
-                        />
-                      </div>
-                    </td>
-                    <td>Brazil</td>
-                    <td class="text-right">
-                      220,291
-                    </td>
-                    <td class="text-right">
-                      84,970
-                    </td>
-                    <td class="text-right">
-                      327,751
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+        <div class="py-2 py-md-0">
+          <a
+            href="https://melvynkoh94.github.io/covid19_worldstats/"
+            class="btn btn-success btn-round"
+            style="color: black; font-weight: 600;"
+            >Select a Country</a
+          >
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="table-responsive table-hover table-sales">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th></th>
+                      <th>Country</th>
+                      <th>Infected</th>
+                      <th>Recovered</th>
+                      <th>Deaths</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flag">
+                          <img
+                            src="/static/assets/img/flags/us.png"
+                            alt="united states"
+                          />
+                        </div>
+                      </td>
+                      <td>USA</td>
+                      <td class="text-right">
+                        1,484,285
+                      </td>
+                      <td class="text-right">
+                        327,751
+                      </td>
+                      <td class="text-right">
+                        327,751
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flag">
+                          <img
+                            src="/static/assets/img/flags/es.png"
+                            alt="spain"
+                          />
+                        </div>
+                      </td>
+                      <td>Spain</td>
+                      <td class="text-right">
+                        274,367
+                      </td>
+                      <td class="text-right">
+                        188,967
+                      </td>
+                      <td class="text-right">
+                        327,751
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flag">
+                          <img
+                            src="/static/assets/img/flags/ru.png"
+                            alt="russia"
+                          />
+                        </div>
+                      </td>
+                      <td>Russia</td>
+                      <td class="text-right">
+                        272,043
+                      </td>
+                      <td class="text-right">
+                        63,166
+                      </td>
+                      <td class="text-right">
+                        327,751
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flag">
+                          <img
+                            src="/static/assets/img/flags/gb.png"
+                            alt="greatbritain"
+                          />
+                        </div>
+                      </td>
+                      <td>United Kingdom</td>
+                      <td class="text-right">
+                        236,711
+                      </td>
+                      <td class="text-right">
+                        33,998
+                      </td>
+                      <td class="text-right">
+                        327,751
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flag">
+                          <img
+                            src="/static/assets/img/flags/it.png"
+                            alt="italy"
+                          />
+                        </div>
+                      </td>
+                      <td>Italy</td>
+                      <td class="text-right">
+                        223,885
+                      </td>
+                      <td class="text-right">
+                        120,205
+                      </td>
+                      <td class="text-right">
+                        327,751
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flag">
+                          <img
+                            src="/static/assets/img/flags/br.png"
+                            alt="brazil"
+                          />
+                        </div>
+                      </td>
+                      <td>Brazil</td>
+                      <td class="text-right">
+                        220,291
+                      </td>
+                      <td class="text-right">
+                        84,970
+                      </td>
+                      <td class="text-right">
+                        327,751
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="mapcontainer">
-              <div id="map-example" class="vmap"></div>
+            <div class="col-md-6">
+              <div class="mapcontainer">
+                <div id="map-example" class="vmap"></div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,142 @@
+{% extends "layouts/default.html" %} {% block title %} Dashboard {% endblock
+title %} {% block stylesheets %} {% endblock stylesheets %} {% block content %}
+<div class="page-inner mt--2">
+  <div class="row row-card-no-pd">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h4
+            class="card-title"
+            style="font-weight: 900; font-size: x-large; color: #44d62c;"
+          >
+            Financial Products Available
+          </h4>
+          <p class="card-category" style="font-size: larger;">
+            Apply for one of the best term loans for your urgent needs
+          </p>
+        </div>
+
+        <div class="card-body">
+          <ul
+            class="nav nav-pills nav-secondary nav-pills-no-bd"
+            id="pills-tab-without-border"
+            role="tablist"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="pills-home-tab-nobd"
+                data-toggle="pill"
+                href="#endowmentplan"
+                role="tab"
+                aria-controls="pills-home-nobd"
+                aria-selected="true"
+                >Endowment Plan</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="pills-profile-tab-nobd"
+                data-toggle="pill"
+                href="#shorttermloan"
+                role="tab"
+                aria-controls="pills-profile-nobd"
+                aria-selected="false"
+                >Small Term Loan</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="pills-contact-tab-nobd"
+                data-toggle="pill"
+                href="#longtermloan"
+                role="tab"
+                aria-controls="pills-contact-nobd"
+                aria-selected="false"
+                >Long Term Loan</a
+              >
+            </li>
+          </ul>
+          <div
+            class="tab-content mt-2 mb-3"
+            id="pills-without-border-tabContent"
+          >
+            <div
+              class="tab-pane fade show active"
+              id="endowmentplan"
+              role="tabpanel"
+              aria-labelledby="pills-home-tab-nobd"
+            >
+              <p>
+                Unlike investments like shares or deposits, which require only a
+                lump sum payment at the start, endowment plans require you to
+                continue paying premiums throughout the lifespan of your plan.
+              </p>
+
+              <p>
+                These premiums are generally of a fixed amount each time you
+                pay, although you might have the opportunity to increase or
+                reduce your premiums if you make changes to your plan. You may
+                be required to pay every month, quarter, 6 months or year.
+              </p>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="shorttermloan"
+              role="tabpanel"
+              aria-labelledby="pills-profile-tab-nobd"
+            >
+              <p>
+                In Singapore, short term loans are taken by people who need fast
+                cash for various reasons. These are unsecured loans and to
+                qualify for them, you need to have a regular income from sources
+                such as a job or a business. You also need to be a citizen of
+                Singapore, or a foreigner who has the authority to live in
+                Singapore and work as well.
+              </p>
+
+              <p>
+                Additionally, the law stipulates that you should be above the
+                age of 21 before you can take a short term loan.
+              </p>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="longtermloan"
+              role="tabpanel"
+              aria-labelledby="pills-contact-tab-nobd"
+            >
+              <p>
+                A long-term personal loan is a loan used for big purchases such
+                as a car, boat, complicated surgery or a huge wedding. This
+                guide covers what you need to know before taking up a long term
+                loan in Singapore, including how it works and how to choose the
+                best one for your financial situation.
+              </p>
+
+              <p>
+                Borrowers will have a choice between fixed and variable rates
+                with their long-term personal loan. Fixed-rate loans mean steady
+                repayments, but variable rate loans give you more flexibility
+                with your repayments, including being able to make additional
+                repayments and pay back the loan early.
+              </p>
+            </div>
+            <div class="card-action">
+              <button
+                class="btn btn-success"
+                onclick="window.location.href = '/forms.html';"
+              >
+                Sign me up now!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %} {% block javascripts %} {% endblock javascripts %}
