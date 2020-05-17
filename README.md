@@ -1,2 +1,2 @@
 
-![Screenshot of Main Page](./screenshots/screenshot.JPG)
+![Screenshot of Main Page](/screenshots/screenshot.JPG)
