@@ -14,6 +14,7 @@ various aspects, this web application is customized to integrate financial servi
   ### Tech Stack
 
 * [Python Flask] - HTML enhanced for web apps!
+* [React JS] - painless experience to create interactive UIs
 * [CSS] - awesome web-based text editor
 * [HTML] - Markdown parser done right. Fast and easy to extend.
 * [Javascript] - great UI boilerplate for modern web apps
